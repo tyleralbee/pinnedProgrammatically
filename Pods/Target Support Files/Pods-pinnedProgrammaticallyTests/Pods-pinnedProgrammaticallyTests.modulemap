@@ -1,0 +1,6 @@
+framework module Pods_pinnedProgrammaticallyTests {
+  umbrella header "Pods-pinnedProgrammaticallyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
