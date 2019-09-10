@@ -20,12 +20,14 @@ class PinViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         configureViewComponents()
     }
     
     
     func configureViewComponents(){
+        navigationController?.setNavigationBarHidden(false, animated: true)
         configureTableView()
         configureSearchBar()
     }
@@ -39,6 +41,10 @@ class PinViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         myTableView.dataSource = self
         myTableView.delegate = self
+        
+        //added
+        myTableView.contentInset = UIEdgeInsets(top: 50, left: 0,  bottom: 0, right: 0)
+        
         self.view.addSubview(myTableView)
     }
     
@@ -49,9 +55,10 @@ class PinViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         mySearchBar.sizeToFit()
         mySearchBar.isTranslucent = false
         mySearchBar.delegate = self
+        mySearchBar.frame = CGRect(x: 0, y: 88, width: mySearchBar.frame.size.width, height: 44.0);
+
         searchCompleter.delegate = self
-        navigationItem.titleView = mySearchBar
-        
+        //navigationItem.titleView = mySearchBar
         self.view.addSubview(mySearchBar)
     }
     

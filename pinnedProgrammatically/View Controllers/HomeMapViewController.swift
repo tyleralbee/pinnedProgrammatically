@@ -87,6 +87,7 @@ class HomeMapViewController: UIViewController, CLLocationManagerDelegate {
         //configure pin button
         configurePinButton()
         configureSignOutButton()
+        configureFriendButton()
 
     }
     
@@ -94,12 +95,24 @@ class HomeMapViewController: UIViewController, CLLocationManagerDelegate {
         let button = UIButton(frame: CGRect(x: 50, y: 50, width: 50, height: 50))
         button.backgroundColor = .red
         button.setTitle("Pin", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handlePin), for: .touchUpInside)
         
         view.addSubview(button)
         
-        button.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 40, paddingRight: 0, width: 50, height: 50)
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 40, paddingRight: 50, width: 50, height: 50)
+        //button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
+    func configureFriendButton(){
+        let button = UIButton(frame: CGRect(x: 50, y: 50, width: 50, height: 50))
+        button.backgroundColor = .red
+        button.setTitle("Friend", for: .normal)
+        button.addTarget(self, action: #selector(handleFriend), for: .touchUpInside)
+        
+        view.addSubview(button)
+        
+        button.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 50, paddingBottom: 40, paddingRight: 0, width: 50, height: 50)
+        //button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
     func configureSignOutButton(){
@@ -145,11 +158,17 @@ class HomeMapViewController: UIViewController, CLLocationManagerDelegate {
         self.homeMap.setRegion(region, animated: true)
     }
     
-    @objc func buttonAction(sender: UIButton!) {
-        print("Button tapped")
+    @objc func handlePin(sender: UIButton!) {
         let pinViewController = PinViewController()
 
         self.navigationController?.pushViewController(pinViewController, animated: true)
+        
+    }
+    
+    @objc func handleFriend(sender: UIButton!) {
+        let friendViewController = FriendViewController()
+
+        self.navigationController?.pushViewController(friendViewController, animated: true)
         
     }
     

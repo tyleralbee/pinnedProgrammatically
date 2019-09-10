@@ -22,6 +22,7 @@
 		613747EF230F837500BECE8B /* pinnedProgrammaticallyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613747EE230F837500BECE8B /* pinnedProgrammaticallyTests.swift */; };
 		613747FA230F837500BECE8B /* pinnedProgrammaticallyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613747F9230F837500BECE8B /* pinnedProgrammaticallyUITests.swift */; };
 		61374808230F841600BECE8B /* HomeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61374807230F841600BECE8B /* HomeMapViewController.swift */; };
+		617512AC23277300007E8671 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617512AB23277300007E8671 /* FriendViewController.swift */; };
 		6196A3B92310B4F4007A2BDD /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6196A3B82310B4F4007A2BDD /* Pin.swift */; };
 		F6AF3DDD7D22E1B3C8763A83 /* Pods_pinnedProgrammaticallyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1557ACB572E744C9A3E38098 /* Pods_pinnedProgrammaticallyUITests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		613747F9230F837500BECE8B /* pinnedProgrammaticallyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinnedProgrammaticallyUITests.swift; sourceTree = "<group>"; };
 		613747FB230F837500BECE8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61374807230F841600BECE8B /* HomeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapViewController.swift; sourceTree = "<group>"; };
+		617512AB23277300007E8671 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		6196A3B82310B4F4007A2BDD /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		A623751D1AC4443C47CCD9DA /* Pods-pinnedProgrammaticallyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinnedProgrammaticallyUITests.release.xcconfig"; path = "Target Support Files/Pods-pinnedProgrammaticallyUITests/Pods-pinnedProgrammaticallyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AF39207DF89DD2F13C9203B3 /* Pods-pinnedProgrammaticallyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinnedProgrammaticallyTests.release.xcconfig"; path = "Target Support Files/Pods-pinnedProgrammaticallyTests/Pods-pinnedProgrammaticallyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				611F03A72314D2D7009671FC /* SignUpViewController.swift */,
 				61374807230F841600BECE8B /* HomeMapViewController.swift */,
 				6117937B2310A3FB000CC502 /* PinViewController.swift */,
+				617512AB23277300007E8671 /* FriendViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				611F03A82314D2D7009671FC /* SignUpViewController.swift in Sources */,
 				6196A3B92310B4F4007A2BDD /* Pin.swift in Sources */,
 				6117937C2310A3FB000CC502 /* PinViewController.swift in Sources */,
+				617512AC23277300007E8671 /* FriendViewController.swift in Sources */,
 				61374808230F841600BECE8B /* HomeMapViewController.swift in Sources */,
 				613747DA230F837400BECE8B /* AppDelegate.swift in Sources */,
 				611F03A62314D285009671FC /* Extensions.swift in Sources */,
