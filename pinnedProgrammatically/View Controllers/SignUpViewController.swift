@@ -137,22 +137,20 @@ class SignUpController: UIViewController {
             guard let uid = result?.user.uid else { return }
             
             let values = ["email": email, "username": username]
+            db.collection("users").addDocument(data: values)
             
-            Database.database().reference().child("users").child(uid).updateChildValues(values, withCompletionBlock: { (error, ref) in
-                if let error = error {
-                    print("Failed to update database values with error: ", error.localizedDescription)
-                    return
-                }
+
                 
-                guard let navController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
-                guard let controller = navController.viewControllers[0] as? HomeMapViewController else { return }
-                controller.configureViewComponents()
-                controller.configureLocationManager()
-                controller.configurePinsToShow()
-                
-                
-                self.dismiss(animated: true, completion: nil)
-            })
+            guard let navController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else { return }
+            guard let controller = navController.viewControllers[0] as? HomeMapViewController else { return }
+            controller.configureViewComponents()
+            controller.configureLocationManager()
+            controller.configurePinsToShow()
+            
+            
+            self.dismiss(animated: true, completion: nil)
+
+
             
         }
         
